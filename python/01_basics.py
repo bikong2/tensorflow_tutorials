@@ -19,7 +19,7 @@ x = tf.linspace(-3.0, 3.0, n_values)
 # %% Construct a tf.Session to execute the graph.
 sess = tf.Session()
 result = sess.run(x)
-
+print result
 # %% Alternatively pass a session to the eval fn:
 x.eval(session=sess)
 # x.eval() does not work, as it requires a session!
@@ -45,7 +45,7 @@ assert z.graph is tf.get_default_graph()
 
 # %% Execute the graph and plot the result
 plt.plot(z.eval())
-
+#plt.show()
 # %% We can find out the shape of a tensor like so:
 print(z.get_shape())
 
